@@ -2,7 +2,7 @@
   "schema": 1,
   "sourceRepository": "https://github.com/teloa-ai/teloa",
   "sourceDirectory": "firmware/esp32",
-  "sourceRevision": "3597d4d6c8f24dc32c1b5206f981daadacbccc38",
+  "sourceRevision": "64220932506bc4ca286ff38af8a7c79751304477",
   "history": "fresh standalone publication; source revision may precede the public host release",
   "files": {
     ".gitignore": {
@@ -10,8 +10,8 @@
       "bytes": 152
     },
     "CMakeLists.txt": {
-      "sha256": "34387d86980e6552b78b5689afaf85d3bfcfc0e5ec42fd60214fd587ecd94fc5",
-      "bytes": 948
+      "sha256": "db83d86e9f0c2b61e17cd53fa2de0010d65ce04c80ced069e54204d437b1065b",
+      "bytes": 946
     },
     "LICENSE": {
       "sha256": "1bccbac0728e4d46718553f7b5c578c79a52cacfbee9f771667993f70c500ff6",
@@ -22,12 +22,12 @@
       "bytes": 605
     },
     "README.en.md": {
-      "sha256": "2728f6e45bbd3d5afdc9d011154e1a2d0ae63109b784f4769c490349c6ed57ce",
-      "bytes": 2746
+      "sha256": "a809f194e810b0fffd4b30f2f00d3e3710e023cd8f06b98b66f469c18fd626d7",
+      "bytes": 3142
     },
     "README.md": {
-      "sha256": "92f621d0481b4b56ee8e1786336ab89a21690e29c9de9bd821524997399b3a4d",
-      "bytes": 3940
+      "sha256": "95dca5d60316ba7dda1f8635104cc880740b4286ab4aeec7c376627b8faaf01a",
+      "bytes": 4246
     },
     "README.teloa.md": {
       "sha256": "99b7d73f974eab841f7cd1dfa8f4093a5a40c3af231455b8843dcb6e0705a648",
@@ -66,8 +66,8 @@
       "bytes": 34682
     },
     "docs/build.md": {
-      "sha256": "e634364c3549ea7aeceeaf43993923c0eec35d91eb38d13382a13961f8b3042d",
-      "bytes": 2995
+      "sha256": "3da32fbcd8c743eadf6f13c332e64a5e439931f0c88cb610a7b5e95ef8a3d2e5",
+      "bytes": 3552
     },
     "docs/pairing.md": {
       "sha256": "a76fdd9c1abd04dd43525df675ebbff21dc1f061787c96c24d617d3ccfd6bbcf",
@@ -82,16 +82,16 @@
       "bytes": 11349
     },
     "main/CMakeLists.txt": {
-      "sha256": "c9cb1dcb88992ebc50aeb13893d9b26a60a1adb5d8db9fb139c281c036fc6fed",
-      "bytes": 69413
+      "sha256": "6392d6e283ec65ceb4620f7ddec6d199f5e986f58852012082673f514d5f0809",
+      "bytes": 69449
     },
     "main/Kconfig.projbuild": {
       "sha256": "0315b1d9e901dc7d0baa9736a20323360b9c762e39bc1cd725baeb242c0aa302",
       "bytes": 45614
     },
     "main/application.cc": {
-      "sha256": "96167415f06978bf4af5be7ac38d8077f7c7c76af249323c3b890a2bb9d18e09",
-      "bytes": 62777
+      "sha256": "a8e0ce1f963ba0ededa3f4b1ba2e930ec28bc111725ff29c3942633c6946bbf1",
+      "bytes": 62804
     },
     "main/application.h": {
       "sha256": "71bfebd37b279b7f07832b80620cd15829e996b2942555ec09e23599464879cc",
@@ -1033,6 +1033,10 @@
       "sha256": "5a12f20dcbc9b4a996113f448b61f5e9971c71c097cf50b5888c2db1662fd383",
       "bytes": 102400
     },
+    "main/teloa/motion.json": {
+      "sha256": "7d09238f563b930da3ee47171e5902d5a35f072ac180d521ac405b78def9fdb5",
+      "bytes": 14990
+    },
     "main/teloa/teloa_approval_view.h": {
       "sha256": "2b9be67b86d20ad869d99e55d42bfe44672f934da4dba8ec0ef8a7aceed49a5b",
       "bytes": 716
@@ -1046,12 +1050,12 @@
       "bytes": 757
     },
     "main/teloa/teloa_display.cc": {
-      "sha256": "5f93b679e74404a8705f9da43829c2d11022c391e04a61576b7ad6d1a3ac9a42",
-      "bytes": 10696
+      "sha256": "252caba2b095a2565fad638ef8aa11a6e1f98ad5570ba93bed6690819a0dec22",
+      "bytes": 16656
     },
     "main/teloa/teloa_display.h": {
-      "sha256": "3baabd8eb787ee805b6039ea5674d5dc2baf4b1e213058f3d0f17b7774579905",
-      "bytes": 1674
+      "sha256": "b3be9c0e7a706949d966e23f640f0357629a1836ecd4b9781bcbbcb288a91283",
+      "bytes": 2232
     },
     "main/teloa/teloa_frame.cc": {
       "sha256": "a8e0ffdd9d787bee2bfcf3a30ae2625f2a9a523fb75afc5a3f50547b6f776a7d",
@@ -1060,6 +1064,18 @@
     "main/teloa/teloa_frame.h": {
       "sha256": "819c51a85a5e4389947fe2248a56798ec9845ebd1555a6b42c67c90c4688fc4e",
       "bytes": 892
+    },
+    "main/teloa/teloa_motion.cc": {
+      "sha256": "1d280e0562d208188cb8cdc770842ea54687e2e73d925bc8ba3bc46f7e4c45b4",
+      "bytes": 2135
+    },
+    "main/teloa/teloa_motion.h": {
+      "sha256": "862d6dab54ecee3d5d9b29a859670f51034491f722b33bc45d2710659d80d618",
+      "bytes": 785
+    },
+    "main/teloa/teloa_motion_data.h": {
+      "sha256": "810d7cae6b16159eb0147fc6228f75ca933afefb1e246a89c20d6903250b8ea5",
+      "bytes": 3951
     },
     "main/teloa/teloa_pages.h": {
       "sha256": "7e771178eb36987c34810db38fbba8a3a6fa77fe4adde5d86ec325caeac8e983",
@@ -1185,13 +1201,25 @@
       "sha256": "7399e92cfabce81996ef720916d6c45be518cfb53dff91e467ea9c030349ef5c",
       "bytes": 1009
     },
+    "tools/build_motion.py": {
+      "sha256": "716aea67e691d5a854d1b182d1a239f5e03bca3b0d33bbc50f8fc23d3f015c29",
+      "bytes": 1983
+    },
     "tools/pair.py": {
       "sha256": "7ca5d19a83435624591133a5db31a47da7400466e370cd4c00612f806a10a193",
       "bytes": 4822
     },
+    "tools/preview.html": {
+      "sha256": "1d51dc5d7a30c1224e287c4913f7422c2ba3af73e71874ef27e8258a16cd7e47",
+      "bytes": 5827
+    },
+    "tools/preview.js": {
+      "sha256": "f44f5f66debf72c4acc62248334bd7a3f8b7e965a315c5745438e1dcd785a05d",
+      "bytes": 6956
+    },
     "tools/preview.py": {
-      "sha256": "cbad22b232a69b44c78b4ed08b2c4145587a238bdfdf746d94b7287e712acf2b",
-      "bytes": 7119
+      "sha256": "20f224f4ca58bae7e6b818b27f41755e8a91f4d22d3fb62a340bcc6b9eeefe87",
+      "bytes": 898
     },
     "tools/release.py": {
       "sha256": "c4e3307933932c79cb7e0a34670d0455d444be3c12aa2bcbc1ac7f7caf211b4d",
@@ -1217,9 +1245,17 @@
       "sha256": "3c0c24d8815927193ad33491fd3fe5384836820346f3052e5015e8cd0f038f57",
       "bytes": 2525
     },
+    "tools/tests/teloa_motion_test.cc": {
+      "sha256": "73a8aed3867729f543446b3fa126837ac4cd2314ce267f267ffa110a4a2ea119",
+      "bytes": 2433
+    },
     "tools/tests/teloa_state_test.cc": {
       "sha256": "d484475fd1ef876a7cecb28420c12f3dab8ad7410ca8d5b8b4a5a46ce4dd321e",
       "bytes": 4661
+    },
+    "tools/tests/test_motion.py": {
+      "sha256": "b056fdef0793a11edbf07cd34e11fd528840767827e7debc0d469f0ab2298c47",
+      "bytes": 1243
     },
     "tools/tests/test_pair.py": {
       "sha256": "3f697122b97e7edeedde97b3eb388db2a1bfb21f022fd4bf30cc1e8ed023cd8b",
@@ -1238,8 +1274,8 @@
       "bytes": 5431
     },
     "upstream.lock.json": {
-      "sha256": "be24c2191fc83c9dd3fc921606d424d8cd246b9c340d95fcc1308ed293f8efd3",
-      "bytes": 27609
+      "sha256": "c7cc3dab02f17b5e1dcd31b436ebe31c711cfb1b92f180cee50878b694ed8013",
+      "bytes": 27611
     }
   }
 }

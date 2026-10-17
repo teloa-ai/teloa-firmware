@@ -1,0 +1,754 @@
+{
+  "schema": 1,
+  "frameMs": 50,
+  "transitionMs": 240,
+  "origin": {
+    "x": 100,
+    "y": 90
+  },
+  "bounds": {
+    "minX": 60,
+    "maxX": 140,
+    "minY": 86,
+    "maxY": 112
+  },
+  "clips": {
+    "idle": {
+      "loop": true,
+      "frames": [
+        {
+          "at": 0,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 0,
+          "activity": "idle",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 1400,
+          "x": 0,
+          "y": -2,
+          "angle": 0,
+          "sx": 258,
+          "sy": 260,
+          "pose": 0,
+          "activity": "idle",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 3000,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 0,
+          "activity": "idle",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 3200,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 1,
+          "activity": "idle",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 3400,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 0,
+          "activity": "idle",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 5000,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 0,
+          "activity": "idle",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 5800,
+          "x": -10,
+          "y": -3,
+          "angle": -20,
+          "sx": 254,
+          "sy": 258,
+          "pose": 0,
+          "activity": "stroll",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 6500,
+          "x": -22,
+          "y": 0,
+          "angle": 20,
+          "sx": 258,
+          "sy": 254,
+          "pose": 0,
+          "activity": "stroll",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 7200,
+          "x": -30,
+          "y": -3,
+          "angle": -20,
+          "sx": 254,
+          "sy": 258,
+          "pose": 2,
+          "activity": "stroll",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 8000,
+          "x": -36,
+          "y": 0,
+          "angle": 20,
+          "sx": 258,
+          "sy": 254,
+          "pose": 0,
+          "activity": "stroll",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 8500,
+          "x": -36,
+          "y": -1,
+          "angle": -40,
+          "sx": 256,
+          "sy": 256,
+          "pose": 2,
+          "activity": "look",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 10200,
+          "x": -36,
+          "y": -2,
+          "angle": 40,
+          "sx": 256,
+          "sy": 256,
+          "pose": 2,
+          "activity": "look",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 11000,
+          "x": -28,
+          "y": -3,
+          "angle": 15,
+          "sx": 254,
+          "sy": 258,
+          "pose": 0,
+          "activity": "stroll",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 11700,
+          "x": -16,
+          "y": 0,
+          "angle": -15,
+          "sx": 258,
+          "sy": 254,
+          "pose": 0,
+          "activity": "stroll",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 12400,
+          "x": 0,
+          "y": -2,
+          "angle": 15,
+          "sx": 254,
+          "sy": 258,
+          "pose": 0,
+          "activity": "stroll",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 13000,
+          "x": 12,
+          "y": 0,
+          "angle": -15,
+          "sx": 258,
+          "sy": 254,
+          "pose": 0,
+          "activity": "stroll",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 13700,
+          "x": 22,
+          "y": -2,
+          "angle": 15,
+          "sx": 254,
+          "sy": 258,
+          "pose": 2,
+          "activity": "stroll",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 14400,
+          "x": 28,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 2,
+          "activity": "look",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 15800,
+          "x": 20,
+          "y": 0,
+          "angle": -20,
+          "sx": 256,
+          "sy": 256,
+          "pose": 0,
+          "activity": "idle",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 16800,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 4,
+          "activity": "read",
+          "prop": "desk",
+          "signal": 0
+        },
+        {
+          "at": 18200,
+          "x": 0,
+          "y": 1,
+          "angle": -15,
+          "sx": 256,
+          "sy": 254,
+          "pose": 4,
+          "activity": "read",
+          "prop": "desk",
+          "signal": 1
+        },
+        {
+          "at": 19600,
+          "x": 0,
+          "y": 0,
+          "angle": 15,
+          "sx": 256,
+          "sy": 256,
+          "pose": 4,
+          "activity": "read",
+          "prop": "desk",
+          "signal": 2
+        },
+        {
+          "at": 20400,
+          "x": 0,
+          "y": 2,
+          "angle": 0,
+          "sx": 258,
+          "sy": 252,
+          "pose": 1,
+          "activity": "rest",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 22200,
+          "x": 0,
+          "y": 3,
+          "angle": -10,
+          "sx": 258,
+          "sy": 250,
+          "pose": 1,
+          "activity": "rest",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 23000,
+          "x": 0,
+          "y": 2,
+          "angle": 0,
+          "sx": 258,
+          "sy": 252,
+          "pose": 1,
+          "activity": "rest",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 23800,
+          "x": 0,
+          "y": -7,
+          "angle": 0,
+          "sx": 250,
+          "sy": 266,
+          "pose": 5,
+          "activity": "stretch",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 24700,
+          "x": 0,
+          "y": 1,
+          "angle": 0,
+          "sx": 260,
+          "sy": 253,
+          "pose": 0,
+          "activity": "idle",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 26000,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 0,
+          "activity": "idle",
+          "prop": "none",
+          "signal": 0
+        }
+      ]
+    },
+    "listening": {
+      "loop": true,
+      "frames": [
+        {
+          "at": 0,
+          "x": 0,
+          "y": 0,
+          "angle": -20,
+          "sx": 256,
+          "sy": 256,
+          "pose": 2,
+          "activity": "listening",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 600,
+          "x": 0,
+          "y": -2,
+          "angle": 15,
+          "sx": 258,
+          "sy": 260,
+          "pose": 2,
+          "activity": "listening",
+          "prop": "none",
+          "signal": 1
+        },
+        {
+          "at": 1200,
+          "x": 0,
+          "y": -1,
+          "angle": 30,
+          "sx": 256,
+          "sy": 258,
+          "pose": 2,
+          "activity": "listening",
+          "prop": "none",
+          "signal": 2
+        },
+        {
+          "at": 1800,
+          "x": 0,
+          "y": 0,
+          "angle": -20,
+          "sx": 256,
+          "sy": 256,
+          "pose": 2,
+          "activity": "listening",
+          "prop": "none",
+          "signal": 0
+        }
+      ]
+    },
+    "thinking": {
+      "loop": true,
+      "frames": [
+        {
+          "at": 0,
+          "x": 0,
+          "y": 0,
+          "angle": -15,
+          "sx": 256,
+          "sy": 256,
+          "pose": 4,
+          "activity": "working",
+          "prop": "desk",
+          "signal": 0
+        },
+        {
+          "at": 700,
+          "x": 0,
+          "y": 2,
+          "angle": 10,
+          "sx": 256,
+          "sy": 253,
+          "pose": 4,
+          "activity": "working",
+          "prop": "desk",
+          "signal": 1
+        },
+        {
+          "at": 1400,
+          "x": 0,
+          "y": 0,
+          "angle": 15,
+          "sx": 256,
+          "sy": 256,
+          "pose": 3,
+          "activity": "working",
+          "prop": "desk",
+          "signal": 2
+        },
+        {
+          "at": 2100,
+          "x": 0,
+          "y": -1,
+          "angle": -10,
+          "sx": 256,
+          "sy": 258,
+          "pose": 3,
+          "activity": "working",
+          "prop": "desk",
+          "signal": 0
+        },
+        {
+          "at": 2800,
+          "x": 0,
+          "y": 0,
+          "angle": -15,
+          "sx": 256,
+          "sy": 256,
+          "pose": 4,
+          "activity": "working",
+          "prop": "desk",
+          "signal": 0
+        }
+      ]
+    },
+    "speaking": {
+      "loop": true,
+      "frames": [
+        {
+          "at": 0,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 0,
+          "activity": "speaking",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 250,
+          "x": 0,
+          "y": -2,
+          "angle": -15,
+          "sx": 258,
+          "sy": 260,
+          "pose": 0,
+          "activity": "speaking",
+          "prop": "none",
+          "signal": 1
+        },
+        {
+          "at": 500,
+          "x": 0,
+          "y": 0,
+          "angle": 10,
+          "sx": 256,
+          "sy": 256,
+          "pose": 0,
+          "activity": "speaking",
+          "prop": "none",
+          "signal": 2
+        },
+        {
+          "at": 800,
+          "x": 0,
+          "y": -1,
+          "angle": -10,
+          "sx": 257,
+          "sy": 258,
+          "pose": 0,
+          "activity": "speaking",
+          "prop": "none",
+          "signal": 1
+        },
+        {
+          "at": 1100,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 0,
+          "activity": "speaking",
+          "prop": "none",
+          "signal": 0
+        }
+      ]
+    },
+    "happy": {
+      "loop": false,
+      "frames": [
+        {
+          "at": 0,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 5,
+          "activity": "happy",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 250,
+          "x": 0,
+          "y": 3,
+          "angle": 0,
+          "sx": 264,
+          "sy": 246,
+          "pose": 5,
+          "activity": "happy",
+          "prop": "none",
+          "signal": 1
+        },
+        {
+          "at": 650,
+          "x": 0,
+          "y": -12,
+          "angle": -35,
+          "sx": 250,
+          "sy": 262,
+          "pose": 5,
+          "activity": "happy",
+          "prop": "none",
+          "signal": 2
+        },
+        {
+          "at": 1050,
+          "x": 0,
+          "y": 1,
+          "angle": 20,
+          "sx": 262,
+          "sy": 250,
+          "pose": 5,
+          "activity": "happy",
+          "prop": "none",
+          "signal": 1
+        },
+        {
+          "at": 1450,
+          "x": 0,
+          "y": -6,
+          "angle": -20,
+          "sx": 254,
+          "sy": 260,
+          "pose": 5,
+          "activity": "happy",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 1900,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 5,
+          "activity": "happy",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 2600,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 0,
+          "activity": "idle",
+          "prop": "none",
+          "signal": 0
+        }
+      ]
+    },
+    "pet": {
+      "loop": false,
+      "frames": [
+        {
+          "at": 0,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 2,
+          "activity": "pet",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 250,
+          "x": 0,
+          "y": -3,
+          "angle": -45,
+          "sx": 258,
+          "sy": 258,
+          "pose": 1,
+          "activity": "pet",
+          "prop": "sparkle",
+          "signal": 1
+        },
+        {
+          "at": 650,
+          "x": 0,
+          "y": -2,
+          "angle": 35,
+          "sx": 260,
+          "sy": 258,
+          "pose": 1,
+          "activity": "pet",
+          "prop": "sparkle",
+          "signal": 2
+        },
+        {
+          "at": 1050,
+          "x": 0,
+          "y": -1,
+          "angle": -20,
+          "sx": 258,
+          "sy": 256,
+          "pose": 5,
+          "activity": "pet",
+          "prop": "sparkle",
+          "signal": 1
+        },
+        {
+          "at": 1500,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 0,
+          "activity": "idle",
+          "prop": "none",
+          "signal": 0
+        }
+      ]
+    },
+    "approval": {
+      "loop": false,
+      "frames": [
+        {
+          "at": 0,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 4,
+          "activity": "waiting",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 1000,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 4,
+          "activity": "waiting",
+          "prop": "none",
+          "signal": 0
+        }
+      ]
+    },
+    "pairing": {
+      "loop": false,
+      "frames": [
+        {
+          "at": 0,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 2,
+          "activity": "pairing",
+          "prop": "none",
+          "signal": 0
+        },
+        {
+          "at": 1000,
+          "x": 0,
+          "y": 0,
+          "angle": 0,
+          "sx": 256,
+          "sy": 256,
+          "pose": 2,
+          "activity": "pairing",
+          "prop": "none",
+          "signal": 0
+        }
+      ]
+    }
+  },
+  "quietFrameMs": 250
+}

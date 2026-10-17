@@ -8,7 +8,9 @@ Bring Teloa's squirrel assistant to ESP32-S3 hardware. This firmware connects ov
 
 The default build uses Teloa's direct LAN protocol. It does not activate with, obtain startup updates from, or connect through the official Xiaozhi service. Models, ASR and TTS use your own host configuration; no API keys or free speech service are included.
 
-**Development source: `0.1.0-dev-b2.1`.** The Bubble / ESP-VoCat configuration is a candidate, not a verified hardware installation target. PCB identity, touch, microphone, speaker and full device recovery still require physical validation. No universal flashable binary or automated installer is released here. Application OTA download and the complete update flow are not implemented.
+The squirrel breathes, blinks, strolls, looks around, reads, rests and stretches while idle, and returns to its desk for work. Petting is a local reaction; voice and approval buttons remain separate. Hold the top of the screen for 0.9 seconds to toggle still mode for the current boot. Review and pairing pause life animations. Six embedded poses are reused; no online image generation is needed.
+
+**Development source: `0.1.0-dev-b3`.** The Bubble / ESP-VoCat configuration is a candidate, not a verified hardware installation target. PCB identity, touch, microphone, speaker and full device recovery still require physical validation. No universal flashable binary or automated installer is released here. Application OTA download and the complete update flow are not implemented.
 
 A compatible development host must implement `teloa-device/v1`, owner-approved USB pairing IPC and the native approval bridge. Do not assume the currently published Teloa npm/Docker versions support these interfaces. Firmware source and protocol are being opened independently; a compatible host release follows separately. Offline preview and compilation do not require a host.
 

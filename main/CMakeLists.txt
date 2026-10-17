@@ -4,6 +4,7 @@ endif()
 
 # Define source files
 set(SOURCES "audio/audio_codec.cc"
+            "teloa/teloa_motion.cc"
             "teloa/teloa_frame.cc"
             "teloa/teloa_control.cc"
             "teloa/teloa_state.cc"

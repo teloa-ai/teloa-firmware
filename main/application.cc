@@ -686,7 +686,7 @@ void Application::InitializeProtocol() {
             else if(kind=="teloa_approval_count"){if(auto screen=teloa::TeloaDisplay::Current())screen->ApprovalCount(static_cast<unsigned>(std::stoul(message)));}
             else if(kind=="teloa_approval_done"){if(auto screen=teloa::TeloaDisplay::Current()){if(screen->DismissApproval(identity.ticket))screen->SetChatMessage("system",state=="submitted"?teloa::device::strings::kDecisionSubmitted:teloa::device::strings::kDecisionStale);}}
             else if (kind == "teloa_drain") { if (audio_service_.IsPlaybackIdle()) direct->PlaybackDrained(); }
-            else if (kind == "teloa_status") { display->SetChatMessage("system", message.c_str());if(auto screen=teloa::TeloaDisplay::Current())screen->SetState(state=="needs_approval"?"approval":state=="pending"||state=="unknown"?"thinking":"idle"); }
+            else if (kind == "teloa_status") { display->SetChatMessage("system", message.c_str());if(auto screen=teloa::TeloaDisplay::Current())screen->SetState(state=="completed"?"happy":state=="needs_approval"?"approval":state=="pending"||state=="unknown"?"thinking":"idle"); }
             else if (kind == "stt") display->SetChatMessage("user", message.c_str());
             else if (kind == "tts" && state == "start") { aborted_ = false; SetDeviceState(kDeviceStateSpeaking); }
             else if (kind == "tts" && state == "stop") SetDeviceState(kDeviceStateIdle);

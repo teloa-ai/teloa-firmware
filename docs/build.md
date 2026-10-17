@@ -48,6 +48,12 @@ python3 -m venv ".venv-tools"
 
 六个 WebP 原图位于 `artwork/companion`，从已定稿角色复用。字体输入是锁定 LVGL 9.5.0 组件自带的 `SourceHanSansSC-Normal.otf`，衍生字体名为 Teloa CJK。`main/teloa/assets` 中两个 manifest 记录输入与输出摘要。
 
+## 动作定义
+
+`main/teloa/motion.json` 是动作时序、位置、姿势和节奏的唯一来源，`tools/build_motion.py` 生成固件 constexpr 表，浏览器预览直接读取同一 JSON。修改后运行 `python3 tools/build_motion.py`，检查用 `python3 tools/build_motion.py --check`。新动作不得覆盖配对或审批，也不得伪造任务进度。
+
+正常动作最多 20 Hz，安静、配对和审批时降低为 4 Hz 检查；复用现有六张图，不增加位图帧。实体帧率、CPU、音频并行与功耗仍需实机测量。
+
 ## 编译与安装
 
 配置启用软件签名校验和应用回滚，未启用硬件 Secure Boot、Flash 加密或 eFuse 写入。普通 `build/teloa.bin` 不是已签名发行物，IDF 生成的通用刷机参数也不是实机核对后的安装计划。签名、兼容性与恢复材料见[恢复说明](recovery.md)。

@@ -3,6 +3,7 @@
 #include <functional>
 #include <vector>
 #include "teloa_approval_view.h"
+#include "teloa_motion.h"
 
 namespace teloa {
 enum class ScreenAction { OpenApprovals, ApproveOnce, Reject, NextPage, Back };
@@ -27,11 +28,26 @@ public:
     static TeloaDisplay* Current(){return current_;}
 private:
     void Draw();
+    void SetMotionState(const std::string& state);
+    void DrawPet(uint32_t now);
+    void SceneVisible(bool visible);
+    void ApplySceneTheme(Theme* theme);
     lv_timer_t* animation_=nullptr;
     lv_obj_t* name_=nullptr;
     lv_obj_t* primary_=nullptr;
     lv_obj_t* secondary_=nullptr;
     lv_obj_t* caption_=nullptr;
+    lv_obj_t* floor_=nullptr;
+    lv_obj_t* shadow_=nullptr;
+    lv_obj_t* desk_=nullptr;
+    lv_obj_t* activity_label_=nullptr;
+    lv_obj_t* effect_=nullptr;
+    lv_obj_t* signal_[3]{};
+    PetFrame frame_{},transition_{};
+    uint32_t state_at_=0,react_at_=0,transition_at_=0;
+    unsigned pose_=6;
+    uint32_t frame_period_=50;
+    bool reacting_=false,quiet_=false;
     std::function<void(ScreenRequest)> action_;
     std::string state_="idle";
     ApprovalIdentity approval_;
