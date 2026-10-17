@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "width": 160,
+  "height": 160,
+  "format": "ARGB8888-little-endian",
+  "source": "artwork/companion",
+  "poses": {
+    "standing": {
+      "sourceSha256": "f1e18755fd6e4fb066a1225da5f29b766912b062608ca7fb05ba4129290f54dd",
+      "rgbaSha256": "bc47640ffefdaa32fc998342d37b48702bfda38ddcaff94ede2984ea38a6dc89"
+    },
+    "wink": {
+      "sourceSha256": "c1ec0716a63467873f9f3d087c0c90984c41763dbf686b9348e51c64b65ef379",
+      "rgbaSha256": "5a12f20dcbc9b4a996113f448b61f5e9971c71c097cf50b5888c2db1662fd383"
+    },
+    "curious": {
+      "sourceSha256": "d24f7d90b988267d582f67952c2b8891bbb3999f394d4a9dc0f955c1edeb95a3",
+      "rgbaSha256": "6f1ae2a4def7582f96429d2b0051994af4060346c75a7b143c8bf20e163540b2"
+    },
+    "thinking": {
+      "sourceSha256": "02fd7fa17b8e462cabf779449d1c47625b32236582b7b0152effa77b127cc3f0",
+      "rgbaSha256": "97a13a75a675fe7721101bab9099218405a90065ac193b1de5678207e94d4c03"
+    },
+    "reading": {
+      "sourceSha256": "83bcd3911f5bdf1177ffa30577ee60a2756d1b7a247a9727497a64dfa75fd4e9",
+      "rgbaSha256": "3ab20ae3a3763c45c214c94f2852cb3e20326be97773e146d9690ba255c5d3f4"
+    },
+    "celebrating": {
+      "sourceSha256": "1164297b3d1ad2614c91bae51e746aed9ea37429fc5809b73c035ef0d5b97b7a",
+      "rgbaSha256": "258497c559748fbe18d7997cbb6951d6660d295c12766cfc200fa74568153b7e"
+    }
+  }
+}

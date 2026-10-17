@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "source": "LVGL 9.5.0 bundled SourceHanSansSC-Normal.otf",
+  "sourceSha256": "1ee89e1669362dee13851129c0a8a791a87521eb4148e5efbf5d26596738e25b",
+  "derivative": "Teloa CJK 20px 1bpp",
+  "license": "SIL-OFL-1.1",
+  "glyphCount": 6797,
+  "bitmapBytes": 337567,
+  "outputSha256": "bb308b461460bb55440b35f63719ca668e40ddab6494b75310b69d763894b1a3"
+}
