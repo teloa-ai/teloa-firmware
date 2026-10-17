@@ -2,7 +2,7 @@
   "schema": 1,
   "sourceRepository": "https://github.com/teloa-ai/teloa",
   "sourceDirectory": "firmware/esp32",
-  "sourceRevision": "30e5dfccb3e49d2a15948da8ab964e99d2036055",
+  "sourceRevision": "f6d8eea6b03b223fdf43350151c0748476a99af3",
   "history": "fresh standalone publication; source revision may precede the public host release",
   "files": {
     ".gitignore": {
@@ -1186,7 +1186,7 @@
       "bytes": 16384
     },
     "main/teloa/assets/font-manifest.json": {
-      "sha256": "e7af7a67c22c48563fe7a9021e313c2c6ad6a62e09d22c3faded0ef14af83f9a",
+      "sha256": "53a7acb2d2cb7f50ce43e55f42f488479ebd225fbd87a042e97033f7558c5653",
       "bytes": 365
     },
     "main/teloa/assets/mascot-manifest.json": {
@@ -1206,8 +1206,8 @@
       "bytes": 26105
     },
     "main/teloa/assets/teloa_cjk_20.c": {
-      "sha256": "bb308b461460bb55440b35f63719ca668e40ddab6494b75310b69d763894b1a3",
-      "bytes": 1585284
+      "sha256": "c496ef4ff3728498bed55fbcefeb9d8d304f26b817fb6b1c569850051d2ed564",
+      "bytes": 1588112
     },
     "main/teloa/assets/teloa_sprite_data.h": {
       "sha256": "e4b897caa626437122be07d2a8a6fa8cdf804633d1fceee10ff5724d9833cfc8",
@@ -1238,8 +1238,8 @@
       "bytes": 757
     },
     "main/teloa/teloa_display.cc": {
-      "sha256": "99900abb762a48df0c088f170ac41606d12c84faa09ff2ff74c85aa64f3b0f75",
-      "bytes": 17232
+      "sha256": "ee5be529d18e3ef212da46a90ef6e672c90f9ee0229a704a03a2f740c74b1a4e",
+      "bytes": 17235
     },
     "main/teloa/teloa_display.h": {
       "sha256": "326b968e3b5b7ffb5fce3d719f11e40ceb5df6ced989f36bb7d715ac408e034b",
@@ -1462,8 +1462,8 @@
       "bytes": 4661
     },
     "tools/tests/test_motion.py": {
-      "sha256": "b056fdef0793a11edbf07cd34e11fd528840767827e7debc0d469f0ab2298c47",
-      "bytes": 1243
+      "sha256": "4bff99bf63193158f8141f2994cf51f0ce36cf454d585c78a965e2c04dee13da",
+      "bytes": 1867
     },
     "tools/tests/test_pair.py": {
       "sha256": "3f697122b97e7edeedde97b3eb388db2a1bfb21f022fd4bf30cc1e8ed023cd8b",

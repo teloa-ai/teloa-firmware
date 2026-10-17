@@ -24,7 +24,7 @@ const char* ActivityText(const char* activity){
 #if CONFIG_LANGUAGE_EN_US
  const char* values[]={"Here with you","A little walk","Looking around","Reading quietly","Taking a break","A little stretch","Listening","Working on it","Speaking","Waiting for you","USB pairing","All done","Hello there","A little tail wag"};
 #elif CONFIG_LANGUAGE_ZH_TW
- const char* values[]={"陪你待一會兒","散個步","四處看看","翻翻書","休息一下","伸個懶腰","我在聽","正在處理","正在播報","等待你確認","USB 配對","完成了","摸摸頭，收到啦","搖搖尾巴"};
+ const char* values[]={"陪你待一會兒","散個步","四處看看","翻翻書","休息一下","伸個懶腰","我在聽","正在處理","正在播報","等待你確認","USB 配對","完成了","摸摸頭，收到啦","尾巴動一動"};
 #else
  const char* values[]={"陪你待一会儿","散个步","四处看看","翻翻书","休息一下","伸个懒腰","我在听","正在处理","正在播报","等待你确认","USB 配对","完成了","摸摸头，收到啦","摇摇尾巴"};
 #endif
