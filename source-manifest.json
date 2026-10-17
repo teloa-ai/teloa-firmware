@@ -2,7 +2,7 @@
   "schema": 1,
   "sourceRepository": "https://github.com/teloa-ai/teloa",
   "sourceDirectory": "firmware/esp32",
-  "sourceRevision": "f6d8eea6b03b223fdf43350151c0748476a99af3",
+  "sourceRevision": "784f42442abd801cc1a17ff765c47deee313b34e",
   "history": "fresh standalone publication; source revision may precede the public host release",
   "files": {
     ".gitignore": {
@@ -22,16 +22,20 @@
       "bytes": 605
     },
     "README.en.md": {
-      "sha256": "3dea57c7b1f5ce411f12340c59b6fead01208af2d34d4aaedbd636c8a8f226f3",
-      "bytes": 4081
+      "sha256": "5851db2b9c68067581a641c1b2e142e78aaa76b58468c1014ea155e6b442048c",
+      "bytes": 117
     },
     "README.md": {
-      "sha256": "174ecad9e9b5da9311c8023e2e71dc459c3c94ee4ac8ba2ac8219cb9f6e2ea24",
-      "bytes": 5299
+      "sha256": "ffb21a4bc98aba89e43619b4c44eafbc53593ab31bf992d88d428e7d1e13283b",
+      "bytes": 4095
     },
     "README.teloa.md": {
-      "sha256": "99b7d73f974eab841f7cd1dfa8f4093a5a40c3af231455b8843dcb6e0705a648",
-      "bytes": 160
+      "sha256": "ccdaac928f1bf452d9baabf981df1c2571dcf77b48bb8062d64691ace95c9571",
+      "bytes": 179
+    },
+    "README.zh-CN.md": {
+      "sha256": "961239875aed8b96ef6e799d71ed9156ed61874eb63f1a705e0d24eb106248c2",
+      "bytes": 5309
     },
     "THIRD_PARTY_NOTICES.md": {
       "sha256": "f575c0c2f780e152afe464bb7c88bcc46d3a5dc9ffe256ce5a5b9effcccd630e",
