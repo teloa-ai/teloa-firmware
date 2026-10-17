@@ -7,19 +7,16 @@
 #include <iostream>
 using namespace teloa;
 int main(){
-    std::set<std::string> activities;
-    int min_x=100,max_x=-100;
+    // 待机生活时序由 SelectPetSprite 唯一负责；此表仅保留静态回退。
     for(unsigned time=0;time<78000;time+=17){
         const auto frame=SamplePetMotion("idle",time);
         assert(frame.x>=-40&&frame.x<=40&&frame.y>=-14&&frame.y<=12);
         assert(frame.sx>=240&&frame.sx<=270&&frame.sy>=240&&frame.sy<=270&&frame.pose<6);
-        activities.insert(frame.activity);min_x=std::min(min_x,frame.x);max_x=std::max(max_x,frame.x);
-        const auto repeated=SamplePetMotion("idle",time+26000);
+        assert(frame.x==0&&frame.y==0&&frame.angle==0&&frame.sx==256&&frame.sy==256&&frame.pose==0);
+        const auto repeated=SamplePetMotion("idle",time+1000);
         assert(frame.x==repeated.x&&frame.y==repeated.y&&frame.pose==repeated.pose);
     }
-    assert(min_x<=-35&&max_x>=25);
-    for(auto name:{"stroll","look","read","rest","stretch"})assert(activities.count(name));
-    auto previous=SamplePetMotion("idle",25999),next=SamplePetMotion("idle",26000);
+    auto previous=SamplePetMotion("idle",999),next=SamplePetMotion("idle",1000);
     assert(std::abs(previous.x-next.x)<=1&&std::abs(previous.y-next.y)<=1);
     for(auto mode:{"listening","speaking","thinking","happy","pet","approval","pairing"}){
         for(unsigned time=0;time<5000;time+=13){

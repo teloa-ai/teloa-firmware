@@ -1128,8 +1128,8 @@ if(CONFIG_BOARD_TYPE_ESP32_P4_FUNCTION_EV_BOARD)
     )
 endif()
 if(CONFIG_TELOA_DIRECT)
-    list(APPEND SOURCES "teloa/assets/teloa_cjk_20.c" "teloa/teloa_protocol.cc" "teloa/teloa_pairing.cc" "teloa/teloa_time.cc" "teloa/teloa_display.cc")
-    set(TELOA_MASCOT_ASSETS "teloa/assets/standing.rgba" "teloa/assets/wink.rgba" "teloa/assets/curious.rgba" "teloa/assets/thinking.rgba" "teloa/assets/reading.rgba" "teloa/assets/celebrating.rgba")
+    list(APPEND SOURCES "teloa/assets/teloa_cjk_20.c" "teloa/teloa_protocol.cc" "teloa/teloa_pairing.cc" "teloa/teloa_time.cc" "teloa/teloa_display.cc" "teloa/teloa_sprite.cc" "teloa/teloa_sprite_player.cc")
+    set(TELOA_MASCOT_ASSETS "teloa/assets/mascot.pet" "teloa/assets/fallback.rgba")
 endif()
 idf_component_register(SRCS ${SOURCES}
                     EMBED_FILES ${LANG_SOUNDS} ${COMMON_SOUNDS} ${TELOA_MASCOT_ASSETS}

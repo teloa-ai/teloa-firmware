@@ -5,15 +5,10 @@
 #include "lvgl_font.h"
 #include <cmath>
 #include <cstring>
+#include <algorithm>
 #include "teloa_pages.h"
 #include "teloa_strings.h"
 
-extern const uint8_t standing[] asm("_binary_standing_rgba_start");
-extern const uint8_t wink[] asm("_binary_wink_rgba_start");
-extern const uint8_t curious[] asm("_binary_curious_rgba_start");
-extern const uint8_t thinking[] asm("_binary_thinking_rgba_start");
-extern const uint8_t reading[] asm("_binary_reading_rgba_start");
-extern const uint8_t celebrating[] asm("_binary_celebrating_rgba_start");
 LV_FONT_DECLARE(teloa_cjk_20);
 namespace teloa {
 TeloaDisplay* TeloaDisplay::current_=nullptr;
@@ -27,14 +22,14 @@ constexpr auto kName="小罗同学",kReview="待确认",kBack="返回",kNext="�
 #endif
 const char* ActivityText(const char* activity){
 #if CONFIG_LANGUAGE_EN_US
- const char* values[]={"Here with you","A little walk","Looking around","Reading quietly","Taking a break","A little stretch","Listening","Working on it","Speaking","Waiting for you","USB pairing","All done","Hello there"};
+ const char* values[]={"Here with you","A little walk","Looking around","Reading quietly","Taking a break","A little stretch","Listening","Working on it","Speaking","Waiting for you","USB pairing","All done","Hello there","A little tail wag"};
 #elif CONFIG_LANGUAGE_ZH_TW
- const char* values[]={"陪你待一會兒","散個步","四處看看","翻翻書","休息一下","伸個懶腰","我在聽","正在處理","正在播報","等待你確認","USB 配對","完成了","摸摸頭，收到啦"};
+ const char* values[]={"陪你待一會兒","散個步","四處看看","翻翻書","休息一下","伸個懶腰","我在聽","正在處理","正在播報","等待你確認","USB 配對","完成了","摸摸頭，收到啦","搖搖尾巴"};
 #else
- const char* values[]={"陪你待一会儿","散个步","四处看看","翻翻书","休息一下","伸个懒腰","我在听","正在处理","正在播报","等待你确认","USB 配对","完成了","摸摸头，收到啦"};
+ const char* values[]={"陪你待一会儿","散个步","四处看看","翻翻书","休息一下","伸个懒腰","我在听","正在处理","正在播报","等待你确认","USB 配对","完成了","摸摸头，收到啦","摇摇尾巴"};
 #endif
- const char* names[]={"idle","stroll","look","read","rest","stretch","listening","working","speaking","waiting","pairing","happy","pet"};
- for(unsigned i=0;i<13;i++){if(!strcmp(activity,names[i]))return values[i];}
+ const char* names[]={"idle","stroll","look","read","rest","stretch","listening","working","speaking","waiting","pairing","happy","pet","tail"};
+ for(unsigned i=0;i<14;i++){if(!strcmp(activity,names[i]))return values[i];}
  return values[0];
 }
 lv_obj_t* Shape(lv_obj_t* parent,int x,int y,int width,int height,int radius){
@@ -47,9 +42,8 @@ lv_obj_t* Label(lv_obj_t* parent,int x,int y,int width,const char* text){auto la
 void Text(lv_obj_t* object,const char* text){if(strcmp(lv_label_get_text(object),text))lv_label_set_text(object,text);}
 void Palette(LvglTheme* theme){theme->text_font()->SetFallback(&teloa_cjk_20);const bool dark=theme->name()=="dark";theme->set_background_color(lv_color_hex(dark?0x20221f:0xfcfcfb));theme->set_text_color(lv_color_hex(dark?0xe7e9e3:0x242723));theme->set_assistant_bubble_color(lv_color_hex(dark?0x283c30:0xeaf3ed));}
 bool Readable(const std::string& text,const lv_font_t* font){uint32_t point=0;for(unsigned char byte:text){if((byte&0xc0)==0x80){point=(point<<6)|(byte&63);continue;}if(point&&point!='\n'){lv_font_glyph_dsc_t glyph{};if(!lv_font_get_glyph_dsc(font,&glyph,point,0)||glyph.is_placeholder)return false;}point=byte<128?byte:byte&((byte&0xe0)==0xc0?31:(byte&0xf0)==0xe0?15:7);}if(point&&point!='\n'){lv_font_glyph_dsc_t glyph{};if(!lv_font_get_glyph_dsc(font,&glyph,point,0)||glyph.is_placeholder)return false;}return true;}
-const lv_image_dsc_t* Image(unsigned index){static lv_image_dsc_t images[6]{};static const uint8_t* data[]={standing,wink,curious,thinking,reading,celebrating};if(!images[0].data){for(unsigned i=0;i<6;i++){images[i].header.magic=LV_IMAGE_HEADER_MAGIC;images[i].header.cf=LV_COLOR_FORMAT_ARGB8888;images[i].header.w=160;images[i].header.h=160;images[i].header.stride=640;images[i].data_size=102400;images[i].data=data[i];}}return &images[index];}
 }
-TeloaDisplay::~TeloaDisplay(){if(animation_)lv_timer_delete(animation_);if(current_==this)current_=nullptr;}
+TeloaDisplay::~TeloaDisplay(){DisplayLockGuard lock(this);if(animation_)lv_timer_delete(animation_);if(emoji_image_)lv_image_set_src(emoji_image_,nullptr);sprites_.Reset();if(current_==this)current_=nullptr;}
 void TeloaDisplay::SetupUI(){
  if(setup_ui_called_){return;}Display::SetupUI();DisplayLockGuard lock(this);current_=this;
  auto screen=lv_display_get_screen_active(display_);auto theme=static_cast<LvglTheme*>(current_theme_);Palette(theme);lv_obj_set_style_text_font(screen,theme->text_font()->font(),0);lv_obj_set_style_text_color(screen,theme->text_color(),0);
@@ -61,7 +55,7 @@ void TeloaDisplay::SetupUI(){
  desk_=Shape(container_,128,222,104,18,5);lv_obj_set_style_border_width(desk_,1,0);
  for(unsigned i=0;i<3;i++)signal_[i]=Shape(container_,155+i*19,106,7,7,LV_RADIUS_CIRCLE);
  effect_=Label(container_,145,107,70,"");
- emoji_box_=lv_obj_create(container_);lv_obj_set_pos(emoji_box_,100,100);lv_obj_set_size(emoji_box_,160,160);lv_obj_set_style_pad_all(emoji_box_,0,0);lv_obj_set_style_border_width(emoji_box_,0,0);lv_obj_set_style_bg_opa(emoji_box_,LV_OPA_TRANSP,0);lv_obj_remove_flag(emoji_box_,LV_OBJ_FLAG_SCROLLABLE);emoji_image_=lv_image_create(emoji_box_);lv_image_set_src(emoji_image_,Image(0));lv_obj_add_flag(emoji_box_,LV_OBJ_FLAG_OVERFLOW_VISIBLE);lv_image_set_pivot(emoji_image_,80,140);
+ sprites_.Init();emoji_box_=lv_obj_create(container_);lv_obj_set_pos(emoji_box_,92,80);lv_obj_set_size(emoji_box_,176,176);lv_obj_set_style_pad_all(emoji_box_,0,0);lv_obj_set_style_border_width(emoji_box_,0,0);lv_obj_set_style_bg_opa(emoji_box_,LV_OPA_TRANSP,0);lv_obj_remove_flag(emoji_box_,LV_OBJ_FLAG_SCROLLABLE);emoji_image_=lv_image_create(emoji_box_);lv_image_set_src(emoji_image_,sprites_.Show(0));lv_obj_add_flag(emoji_box_,LV_OBJ_FLAG_OVERFLOW_VISIBLE);lv_image_set_pivot(emoji_image_,88,150);
  lv_obj_move_foreground(desk_);lv_obj_move_foreground(effect_);for(auto dot:signal_)lv_obj_move_foreground(dot);
  activity_label_=Label(container_,55,253,250,"");lv_obj_set_style_text_opa(activity_label_,LV_OPA_70,0);
  chat_message_label_=Label(container_,45,277,270,"");lv_obj_set_height(chat_message_label_,22);lv_label_set_long_mode(chat_message_label_,LV_LABEL_LONG_DOT);
@@ -81,7 +75,7 @@ void TeloaDisplay::SetMotionState(const std::string& state){
  if(state_==state){return;}
  transition_=frame_;transition_at_=state_at_=lv_tick_get();state_=state;reacting_=false;
 }
-void TeloaDisplay::SetState(const std::string& state){DisplayLockGuard lock(this);SetMotionState(state);}
+void TeloaDisplay::SetState(const std::string& state){DisplayLockGuard lock(this);SetMotionState(state);Draw();}
 void TeloaDisplay::ApprovalCount(unsigned count){DisplayLockGuard lock(this);count_=count;if(!card_&&primary_){auto label=std::string(kReview)+(count?" ("+std::to_string(count)+")":"");lv_label_set_text(primary_,label.c_str());}}
 void TeloaDisplay::ApprovalCard(const std::string& text,bool can_decide,const ApprovalIdentity& identity){
  DisplayLockGuard lock(this);if(!caption_)return;const bool readable=Readable(text,static_cast<LvglTheme*>(current_theme_)->text_font()->font());pages_=ApprovalPages(readable?text:std::string(teloa::device::strings::kReviewWeb));if(pages_.empty())pages_.push_back(kPending);page_=0;approval_=identity;shown_at_=esp_timer_get_time();card_=true;can_decide_=can_decide&&readable;lv_obj_remove_flag(secondary_,LV_OBJ_FLAG_HIDDEN);SetMotionState("approval");lv_obj_add_flag(emoji_box_,LV_OBJ_FLAG_HIDDEN);lv_obj_add_flag(chat_message_label_,LV_OBJ_FLAG_HIDDEN);lv_obj_remove_flag(caption_,LV_OBJ_FLAG_HIDDEN);Draw();
@@ -97,9 +91,23 @@ void TeloaDisplay::DrawPet(uint32_t now){
  if(reacting_&&now-react_at_>=1500){reacting_=false;transition_=frame_;transition_at_=state_at_=now;}
  auto target=SamplePetMotion(reacting_?"pet":state_.c_str(),frozen?0:now-(reacting_?react_at_:state_at_));
  frame_=frozen?target:BlendPetMotion(transition_,target,now-transition_at_);
- if(pose_!=frame_.pose){pose_=frame_.pose;lv_image_set_src(emoji_image_,Image(pose_));}
- lv_obj_set_pos(emoji_box_,motion_data::origin_x+frame_.x,motion_data::origin_y+frame_.y);lv_image_set_rotation(emoji_image_,frame_.angle);
- lv_image_set_scale_x(emoji_image_,frame_.sx);lv_image_set_scale_y(emoji_image_,frame_.sy);
+ const auto selection=SelectPetSprite(state_.c_str(),now-state_at_,frame_.pose,quiet_,reacting_);
+ const bool daily=state_=="idle"&&!reacting_&&!quiet_&&sprites_.available();
+ if(daily){frame_.x=frame_.y=frame_.angle=0;frame_.sx=frame_.sy=256;frame_.activity=selection.activity;frame_.prop=selection.prop;}
+ const bool audio=state_=="listening"||state_=="speaking";
+ if(audio){frame_.x=frame_.y=frame_.angle=0;frame_.sx=frame_.sy=256;}
+ // 每次只呈现绝对时间对应的一帧；语音期间只显示固定姿势。
+ const auto image=sprites_.Show(selection.index);const bool packed=sprites_.available();
+ if(lv_image_get_src(emoji_image_)!=image)lv_image_set_src(emoji_image_,image);
+ if(!packed&&state_=="idle"){frame_.x=frame_.y=0;frame_.activity="idle";frame_.prop="none";}
+ lv_obj_set_pos(emoji_box_,92+frame_.x,80+frame_.y);
+ lv_obj_set_pos(emoji_image_,packed?0:8,packed?0:10);
+ lv_image_set_pivot(emoji_image_,packed?88:0,packed?150:0);
+ lv_image_set_rotation(emoji_image_,packed?frame_.angle:0);
+ lv_image_set_scale_x(emoji_image_,packed?frame_.sx:640);lv_image_set_scale_y(emoji_image_,packed?frame_.sy:640);
+ const uint32_t spent=lv_tick_get()-now;
+ const uint32_t until_next=selection.remaining_ms>spent?selection.remaining_ms-spent:0;
+ next_frame_ms_=!packed||frozen?250:audio?100:daily?std::clamp<uint32_t>(until_next,sprites_.minimum_interval_ms(),250):50;
  lv_obj_set_x(shadow_,120+frame_.x);lv_obj_set_width(shadow_,120+(frame_.sy-256)/2);
  const bool desk=!strcmp(frame_.prop,"desk");Visible(desk_,desk);if(desk)lv_obj_set_y(desk_,222+(frame_.signal==1?1:0));
  Visible(effect_,!strcmp(frame_.prop,"sparkle"));Text(effect_,"+");lv_obj_set_y(effect_,107-static_cast<int>(frame_.signal)*3);
@@ -113,12 +121,13 @@ void TeloaDisplay::DrawPet(uint32_t now){
 }
 void TeloaDisplay::Draw(){
  if(!emoji_image_)return;
- const uint32_t period=card_||quiet_||state_=="pairing"?motion_data::quiet_frame_ms:motion_data::frame_ms;
- if(period!=frame_period_){frame_period_=period;lv_timer_set_period(animation_,period);}
  if(state_=="pairing"&&!UsbPairing::Instance().Pending()){SetMotionState("idle");Text(status_label_,"");}
  SceneVisible(!card_&&state_!="pairing");
- if(card_){Text(caption_,pages_[page_].c_str());Text(name_,kPending);auto page_label=std::to_string(page_+1)+" / "+std::to_string(pages_.size());Text(status_label_,page_label.c_str());Text(secondary_,can_decide_?kReject:kBack);Text(primary_,page_+1<pages_.size()?kNext:can_decide_?kApprove:kBack);return;}
+ if(card_){if(frame_period_!=250){frame_period_=250;lv_timer_set_period(animation_,250);}lv_timer_reset(animation_);Text(caption_,pages_[page_].c_str());Text(name_,kPending);auto page_label=std::to_string(page_+1)+" / "+std::to_string(pages_.size());Text(status_label_,page_label.c_str());Text(secondary_,can_decide_?kReject:kBack);Text(primary_,page_+1<pages_.size()?kNext:can_decide_?kApprove:kBack);return;}
  DrawPet(lv_tick_get());if(state_=="pairing")SceneVisible(false);Text(name_,kName);
+ if(next_frame_ms_!=frame_period_){frame_period_=next_frame_ms_;lv_timer_set_period(animation_,frame_period_);}
+ // LVGL 原计时基点在回调开始；这里从解码结束重计，与已扣除耗时的间隔对应。
+ lv_timer_reset(animation_);
 }
 bool TeloaDisplay::Touch(int x,int y,uint32_t held_ms,bool held_inside){
  if(UsbPairing::Instance().Pending()){UsbPairing::Instance().ConfirmTouch(held_ms);return true;}

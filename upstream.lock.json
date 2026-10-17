@@ -254,13 +254,13 @@
     "sdkconfig.defaults.esp32s3": "e388847406a8d4a3578079c99318a9b33dff79fd28864465caa8e9e835977985"
   },
   "localModifications": {
-    "main/CMakeLists.txt": "Reject non-direct builds after IDF early expansion; compile finite protocol, pairing, clock, embedded screen and local pet motion.",
+    "main/CMakeLists.txt": "Reject non-direct builds after IDF early expansion; compile finite protocol, pairing, clock, embedded screen and compressed articulated pet playback.",
     "main/Kconfig.projbuild": "Teloa menu and direct mode default, empty official OTA URL in direct mode; mandatory certificate date verification.",
     "main/idf_component.yml": "Pin esp_websocket_client 1.8.0 for private CA and server-name verification.",
     "main/application.cc": "Original audio lifecycle with typed direct events, local boot health and displayed-card-bound approval decisions.",
     "main/audio/audio_service.h": "Match the direct protocol playback acknowledgement window.",
     "main/boards/common/wifi_board.cc": "Teloa setup SSID and hide legacy OTA configuration in direct mode.",
-    "CMakeLists.txt": "Default standalone ESP32-S3 Teloa profile and 0.1.0-dev-b3 application identity; preserve explicit SDK paths.",
+    "CMakeLists.txt": "Default standalone ESP32-S3 Teloa profile and 0.1.0-dev-b4 application identity; preserve explicit SDK paths.",
     "main/boards/espressif/esp-vocat/esp_vocat.cc": "Direct-mode Teloa screen and continuous in-button hold tracking; physical PCB still requires verification.",
     "main/main.cc": "Preserve original NVS on direct-mode initialization failure; do not erase on boot."
   }

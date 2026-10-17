@@ -2,7 +2,7 @@
   "schema": 1,
   "sourceRepository": "https://github.com/teloa-ai/teloa",
   "sourceDirectory": "firmware/esp32",
-  "sourceRevision": "64220932506bc4ca286ff38af8a7c79751304477",
+  "sourceRevision": "30e5dfccb3e49d2a15948da8ab964e99d2036055",
   "history": "fresh standalone publication; source revision may precede the public host release",
   "files": {
     ".gitignore": {
@@ -10,7 +10,7 @@
       "bytes": 152
     },
     "CMakeLists.txt": {
-      "sha256": "db83d86e9f0c2b61e17cd53fa2de0010d65ce04c80ced069e54204d437b1065b",
+      "sha256": "35206683e0698d69001cd2d6689f11b6d04625d4c7034b1a14ce586dbc4fe2f0",
       "bytes": 946
     },
     "LICENSE": {
@@ -22,20 +22,24 @@
       "bytes": 605
     },
     "README.en.md": {
-      "sha256": "a809f194e810b0fffd4b30f2f00d3e3710e023cd8f06b98b66f469c18fd626d7",
-      "bytes": 3142
+      "sha256": "3dea57c7b1f5ce411f12340c59b6fead01208af2d34d4aaedbd636c8a8f226f3",
+      "bytes": 4081
     },
     "README.md": {
-      "sha256": "95dca5d60316ba7dda1f8635104cc880740b4286ab4aeec7c376627b8faaf01a",
-      "bytes": 4246
+      "sha256": "174ecad9e9b5da9311c8023e2e71dc459c3c94ee4ac8ba2ac8219cb9f6e2ea24",
+      "bytes": 5299
     },
     "README.teloa.md": {
       "sha256": "99b7d73f974eab841f7cd1dfa8f4093a5a40c3af231455b8843dcb6e0705a648",
       "bytes": 160
     },
     "THIRD_PARTY_NOTICES.md": {
-      "sha256": "b8115a73b24fed3af1bb8cf7a5fd8b2118792997102caf3079d88fe8c5d13fe9",
-      "bytes": 1653
+      "sha256": "f575c0c2f780e152afe464bb7c88bcc46d3a5dc9ffe256ce5a5b9effcccd630e",
+      "bytes": 1978
+    },
+    "artwork/companion/animation.json": {
+      "sha256": "17d5c03233fdbcc90dd4a80effdbcd631b7fcde3a54c882e2603cacdce800cc7",
+      "bytes": 688
     },
     "artwork/companion/celebrating.webp": {
       "sha256": "1164297b3d1ad2614c91bae51e746aed9ea37429fc5809b73c035ef0d5b97b7a",
@@ -44,6 +48,202 @@
     "artwork/companion/curious.webp": {
       "sha256": "d24f7d90b988267d582f67952c2b8891bbb3999f394d4a9dc0f955c1edeb95a3",
       "bytes": 113328
+    },
+    "artwork/companion/frames/provenance.json": {
+      "sha256": "ccf6f97803f326f698d645b9424ea3aa3850ea8328daf83315b0ba059e754607",
+      "bytes": 7421
+    },
+    "artwork/companion/frames/stretch-00.png": {
+      "sha256": "99da1445d18c5982dcd2b8848d4944d3b5e2331d1c49bb614aee11f88b399747",
+      "bytes": 30488
+    },
+    "artwork/companion/frames/stretch-01.png": {
+      "sha256": "f43258a49c06ddbccb20ca55b94f41f0f7a50d76830e07766db4d66134250edc",
+      "bytes": 31042
+    },
+    "artwork/companion/frames/stretch-02.png": {
+      "sha256": "57cc8e67b351bdb798a8b7286c818ec2184a831d6ace6df838d903706db4843b",
+      "bytes": 30798
+    },
+    "artwork/companion/frames/stretch-03.png": {
+      "sha256": "748f6f80a31a67491abe55ab8e6b4c6db6c12b14c1d732946762a9fa37a874cb",
+      "bytes": 31683
+    },
+    "artwork/companion/frames/stretch-04.png": {
+      "sha256": "0820fd2a3d1d058d255e24aec41ebf603ae9fc1687271eb98d972028d91e45a0",
+      "bytes": 34057
+    },
+    "artwork/companion/frames/stretch-05.png": {
+      "sha256": "62d0eff21dbd085739a6c7f1c1261e96fb1e5a585a7ad6a7702fa0ff4a6b4ddc",
+      "bytes": 34896
+    },
+    "artwork/companion/frames/stretch-06.png": {
+      "sha256": "c2d4695b071ba3590beb5fa32963bcb3cf00a81a2be7afd13723c2609584298f",
+      "bytes": 33460
+    },
+    "artwork/companion/frames/stretch-07.png": {
+      "sha256": "be427104aa21ac174e3d9c72a2e9a692b4646339538fab3b8d027865b86ef284",
+      "bytes": 33537
+    },
+    "artwork/companion/frames/stretch-08.png": {
+      "sha256": "4b73a62993b3d0ccfb4daa7ba0bca80892d2290bf1a5dc8753b3c63ee0f97386",
+      "bytes": 33835
+    },
+    "artwork/companion/frames/stretch-09.png": {
+      "sha256": "f5e98d4eb429fba26ee11f5c0151b3055c2d3a27fe2e1b8aaf4ac7757b7f04c9",
+      "bytes": 33368
+    },
+    "artwork/companion/frames/stretch-10.png": {
+      "sha256": "6819290463c900804d12d0423e23974da36881315fe081a6347a23563c7d3a77",
+      "bytes": 33881
+    },
+    "artwork/companion/frames/stretch-11.png": {
+      "sha256": "e76c8250164c9ff84d006655044a95ebe3d0374388cf0432db2074d46edf96a7",
+      "bytes": 31211
+    },
+    "artwork/companion/frames/stretch-12.png": {
+      "sha256": "8ffeba66562faacf3fda7ad1a3b0663de3b99a3955cd606ac2148f13c7f1dcf6",
+      "bytes": 32341
+    },
+    "artwork/companion/frames/stretch-13.png": {
+      "sha256": "9eef6009ead38b8e08ae6628fd06cac9925be02b054b26f02b2c44566d999615",
+      "bytes": 31512
+    },
+    "artwork/companion/frames/stretch-14.png": {
+      "sha256": "b64ef48390178f10517b059ab3ad939d7ee6be486a817adcdfd0c35acf5351ce",
+      "bytes": 31432
+    },
+    "artwork/companion/frames/stretch-15.png": {
+      "sha256": "74a185b32b7ce28543341ed6ee0c1c831e164eb6a141eb5bee040cf2179cfcf5",
+      "bytes": 31100
+    },
+    "artwork/companion/frames/tail-00.png": {
+      "sha256": "ea049e2672f3edad71dfcc94ac25c13285f6493a51adbca42d7ea2ee279eb27d",
+      "bytes": 33243
+    },
+    "artwork/companion/frames/tail-01.png": {
+      "sha256": "06691100f07eab71a7210acbbe35b393bf142dd5cd976afe6da9b74aed947cd5",
+      "bytes": 31341
+    },
+    "artwork/companion/frames/tail-02.png": {
+      "sha256": "8e15feb6ec2ee4fb7e710270d404447dbb0b55574f722bd53416a6665dd63372",
+      "bytes": 31001
+    },
+    "artwork/companion/frames/tail-03.png": {
+      "sha256": "cfab7f242f8ec0b03371913a594c075c37d53a443d3c7a4535dc70a8212b25b8",
+      "bytes": 29657
+    },
+    "artwork/companion/frames/tail-04.png": {
+      "sha256": "c44c8ba6fd19e388fa47328572f6140c20bba34d447fe6305dc2518c73750b49",
+      "bytes": 28157
+    },
+    "artwork/companion/frames/tail-05.png": {
+      "sha256": "6424eddb17c64327bf0f3f9ebc1c97510684b64e865c47cd4bd49a9f79efec0a",
+      "bytes": 31367
+    },
+    "artwork/companion/frames/tail-06.png": {
+      "sha256": "1757e9616f64d798b667955c5b928bff7c52783c4013b498486feb3828f5e90a",
+      "bytes": 31838
+    },
+    "artwork/companion/frames/tail-07.png": {
+      "sha256": "2252355a6ec3dd1b3e89575de8f73e2252048a52a2ad3e20d11e35dcd3fa50d1",
+      "bytes": 31191
+    },
+    "artwork/companion/frames/tail-08.png": {
+      "sha256": "71b4c7ce8138c78e1c47071846767f6edbe79b3d7a182d9e203e086f92f4761c",
+      "bytes": 31583
+    },
+    "artwork/companion/frames/tail-09.png": {
+      "sha256": "3460ecaaf2bd8f2df512a91192d33b7278bee751ca91236d62109513427e6cac",
+      "bytes": 31855
+    },
+    "artwork/companion/frames/tail-10.png": {
+      "sha256": "3940e0f2d6dbe405956deb5152726f6ebe53db4288b9065cbe612a69399d1ec2",
+      "bytes": 30227
+    },
+    "artwork/companion/frames/tail-11.png": {
+      "sha256": "095aa62155fc5461b28c87a193151e3b2632bfcff6a0cf4abdb041a60d3d2e64",
+      "bytes": 29534
+    },
+    "artwork/companion/frames/tail-12.png": {
+      "sha256": "dd1595ff3d6dfd3d91865a68776e599d9c36d2f6d1fb2b80bec3f5eece498b39",
+      "bytes": 32237
+    },
+    "artwork/companion/frames/tail-13.png": {
+      "sha256": "cda6f64d005c028718a794e5596ce33c0fe4a5ad1bf21750afc8fceb69a56a00",
+      "bytes": 31617
+    },
+    "artwork/companion/frames/tail-14.png": {
+      "sha256": "642f47a3a1aa334705c475236a818c54bf6e64c3bcf11d6d4ee98ae4999d86b0",
+      "bytes": 31784
+    },
+    "artwork/companion/frames/tail-15.png": {
+      "sha256": "eeb3d5f0184c58561554adc7c0dc46913125d9eeb5ab4cb3699b45afb8dd87e1",
+      "bytes": 32202
+    },
+    "artwork/companion/frames/walk-00.png": {
+      "sha256": "6d80abc13066f806177f65600d60b17f7f0b6db736be4837c17b6c16f7744c8d",
+      "bytes": 35673
+    },
+    "artwork/companion/frames/walk-01.png": {
+      "sha256": "33de05bd5e7611e0afb39688a7a3891e6d7e00a22d8d7156a7e989d436fd6337",
+      "bytes": 34867
+    },
+    "artwork/companion/frames/walk-02.png": {
+      "sha256": "e6213de264b8b27f4367b5471054711248867412b3020e4e3c587661ab55bfb6",
+      "bytes": 35471
+    },
+    "artwork/companion/frames/walk-03.png": {
+      "sha256": "dc9513171e6687f1ae71d1a5709a820426175910bac87a344c7f4e87f8780549",
+      "bytes": 35414
+    },
+    "artwork/companion/frames/walk-04.png": {
+      "sha256": "3eef7e2ba06d47ee836f2b3652848cc89ebbd82daa26a696254e8170b3b52b5e",
+      "bytes": 35521
+    },
+    "artwork/companion/frames/walk-05.png": {
+      "sha256": "6adc6f5c98f6fc44140037c89ca28598cfdce010a36bcc76f47bc2f2c21ecb38",
+      "bytes": 35938
+    },
+    "artwork/companion/frames/walk-06.png": {
+      "sha256": "c873d23a1bac4b0539b3ade7d307bcdfba27fc067d6a5491f28a4bc492758876",
+      "bytes": 35399
+    },
+    "artwork/companion/frames/walk-07.png": {
+      "sha256": "5fe5594b42638c0d023153b76d744d058982111cbaf62a72795ee29903deb40e",
+      "bytes": 35273
+    },
+    "artwork/companion/frames/walk-08.png": {
+      "sha256": "2ac3e8c09a53c7827a382e03ac60d6cc1c328a74c23c1a1692ed483a381f725a",
+      "bytes": 36320
+    },
+    "artwork/companion/frames/walk-09.png": {
+      "sha256": "84721059d68f1f852b33b24b18c7d1d3d7d926daba05c81ef9adc33492fd59f6",
+      "bytes": 35892
+    },
+    "artwork/companion/frames/walk-10.png": {
+      "sha256": "fc0635ca2dfa888285b263fbc583b40a2e1446ce5464a9e900164447b1aa0f19",
+      "bytes": 36346
+    },
+    "artwork/companion/frames/walk-11.png": {
+      "sha256": "db86b8eaed76d3e7b23257b296622b8215fe808c4135d653c51fc4f5e0b0c4de",
+      "bytes": 35513
+    },
+    "artwork/companion/frames/walk-12.png": {
+      "sha256": "40bf411b5cf9027629512499521d061b05c24106b3ca1a20942d252be0c41279",
+      "bytes": 34863
+    },
+    "artwork/companion/frames/walk-13.png": {
+      "sha256": "163be68f81e1aeebe4f6304240ea770162580d1e04299179c8466f711df0714a",
+      "bytes": 34903
+    },
+    "artwork/companion/frames/walk-14.png": {
+      "sha256": "37097740e21484ee0b03df06eafc14b696ff0f2424dc70175bfe8c83f1009302",
+      "bytes": 34831
+    },
+    "artwork/companion/frames/walk-15.png": {
+      "sha256": "2d4c613971a0241a53e7ae4207c2254fa5300d985eb669d501c56a3bfbc9c3cd",
+      "bytes": 36016
     },
     "artwork/companion/reading.webp": {
       "sha256": "83bcd3911f5bdf1177ffa30577ee60a2756d1b7a247a9727497a64dfa75fd4e9",
@@ -82,8 +282,8 @@
       "bytes": 11349
     },
     "main/CMakeLists.txt": {
-      "sha256": "6392d6e283ec65ceb4620f7ddec6d199f5e986f58852012082673f514d5f0809",
-      "bytes": 69449
+      "sha256": "475bf1063cb6092c721a09ece948e2822e1c9b918e70e51b8bf0139420e06a3f",
+      "bytes": 69388
     },
     "main/Kconfig.projbuild": {
       "sha256": "0315b1d9e901dc7d0baa9736a20323360b9c762e39bc1cd725baeb242c0aa302",
@@ -977,65 +1177,53 @@
       "sha256": "114a8a27262d8992d95627e1e6d4083b766af0b56234dde12c68e455017d36bd",
       "bytes": 27538
     },
-    "main/teloa/assets/celebrating.rgba": {
-      "sha256": "258497c559748fbe18d7997cbb6951d6660d295c12766cfc200fa74568153b7e",
-      "bytes": 102400
-    },
     "main/teloa/assets/curious.png": {
       "sha256": "8ab3a3a57890e089b9072255f49a1f922e1f74f9214a3a01adecef936f416fd7",
       "bytes": 39421
     },
-    "main/teloa/assets/curious.rgba": {
-      "sha256": "6f1ae2a4def7582f96429d2b0051994af4060346c75a7b143c8bf20e163540b2",
-      "bytes": 102400
+    "main/teloa/assets/fallback.rgba": {
+      "sha256": "ccdc1f9d34503ce3fd1fdebdc747f6d7b0469775b40a890d7d5bcfc201a9c682",
+      "bytes": 16384
     },
     "main/teloa/assets/font-manifest.json": {
       "sha256": "e7af7a67c22c48563fe7a9021e313c2c6ad6a62e09d22c3faded0ef14af83f9a",
       "bytes": 365
     },
-    "main/teloa/assets/manifest.json": {
-      "sha256": "31034c886c233bee448b227f1607191c3a2759daf3d461d5588ccc8ea2c3eda5",
-      "bytes": 1348
+    "main/teloa/assets/mascot-manifest.json": {
+      "sha256": "c849e2d7660f64e3bd9fb55c6bf0501dca9f0f96cff80a384be9de1365287870",
+      "bytes": 9376
+    },
+    "main/teloa/assets/mascot.pet": {
+      "sha256": "89cf22fedc0f61ef79318f2f8c5ccf0752e53efc2a19eca8b1985343888744e9",
+      "bytes": 639263
     },
     "main/teloa/assets/reading.png": {
       "sha256": "d01c12bfcbedef9572a3c36b211d7b1b23ecaddfe7272aa65d18bf8fe7df661c",
       "bytes": 27322
     },
-    "main/teloa/assets/reading.rgba": {
-      "sha256": "3ab20ae3a3763c45c214c94f2852cb3e20326be97773e146d9690ba255c5d3f4",
-      "bytes": 102400
-    },
     "main/teloa/assets/standing.png": {
       "sha256": "a45b35090ff2a35a105ec58dade6874991d62a199c73a551b1618566b7b0f8b6",
       "bytes": 26105
-    },
-    "main/teloa/assets/standing.rgba": {
-      "sha256": "bc47640ffefdaa32fc998342d37b48702bfda38ddcaff94ede2984ea38a6dc89",
-      "bytes": 102400
     },
     "main/teloa/assets/teloa_cjk_20.c": {
       "sha256": "bb308b461460bb55440b35f63719ca668e40ddab6494b75310b69d763894b1a3",
       "bytes": 1585284
     },
+    "main/teloa/assets/teloa_sprite_data.h": {
+      "sha256": "e4b897caa626437122be07d2a8a6fa8cdf804633d1fceee10ff5724d9833cfc8",
+      "bytes": 961
+    },
     "main/teloa/assets/thinking.png": {
       "sha256": "390ce98ed4d8582e8fce203f6f4e1f9c3977960da0cffce3897dab1549660ce0",
       "bytes": 39443
-    },
-    "main/teloa/assets/thinking.rgba": {
-      "sha256": "97a13a75a675fe7721101bab9099218405a90065ac193b1de5678207e94d4c03",
-      "bytes": 102400
     },
     "main/teloa/assets/wink.png": {
       "sha256": "fbcd4924b79e61cf88a13b5e93eeb0c1f0bb76cc883f72badd5a4c2a8414fb23",
       "bytes": 31903
     },
-    "main/teloa/assets/wink.rgba": {
-      "sha256": "5a12f20dcbc9b4a996113f448b61f5e9971c71c097cf50b5888c2db1662fd383",
-      "bytes": 102400
-    },
     "main/teloa/motion.json": {
-      "sha256": "7d09238f563b930da3ee47171e5902d5a35f072ac180d521ac405b78def9fdb5",
-      "bytes": 14990
+      "sha256": "edb217e35eaaab7ccc86d9a747c75424b5e8c151c990fa6805763aae19f5fc42",
+      "bytes": 8608
     },
     "main/teloa/teloa_approval_view.h": {
       "sha256": "2b9be67b86d20ad869d99e55d42bfe44672f934da4dba8ec0ef8a7aceed49a5b",
@@ -1050,12 +1238,12 @@
       "bytes": 757
     },
     "main/teloa/teloa_display.cc": {
-      "sha256": "252caba2b095a2565fad638ef8aa11a6e1f98ad5570ba93bed6690819a0dec22",
-      "bytes": 16656
+      "sha256": "99900abb762a48df0c088f170ac41606d12c84faa09ff2ff74c85aa64f3b0f75",
+      "bytes": 17232
     },
     "main/teloa/teloa_display.h": {
-      "sha256": "b3be9c0e7a706949d966e23f640f0357629a1836ecd4b9781bcbbcb288a91283",
-      "bytes": 2232
+      "sha256": "326b968e3b5b7ffb5fce3d719f11e40ceb5df6ced989f36bb7d715ac408e034b",
+      "bytes": 2303
     },
     "main/teloa/teloa_frame.cc": {
       "sha256": "a8e0ffdd9d787bee2bfcf3a30ae2625f2a9a523fb75afc5a3f50547b6f776a7d",
@@ -1074,8 +1262,8 @@
       "bytes": 785
     },
     "main/teloa/teloa_motion_data.h": {
-      "sha256": "810d7cae6b16159eb0147fc6228f75ca933afefb1e246a89c20d6903250b8ea5",
-      "bytes": 3951
+      "sha256": "a29467b4dcad175c1cf663359956c4976e12e3874e3afa0c6384ccd293a3b51c",
+      "bytes": 2717
     },
     "main/teloa/teloa_pages.h": {
       "sha256": "7e771178eb36987c34810db38fbba8a3a6fa77fe4adde5d86ec325caeac8e983",
@@ -1096,6 +1284,22 @@
     "main/teloa/teloa_protocol.h": {
       "sha256": "955c07a93b4f5bbad4d9d45ed0d21887452834a53222a1b69ee91baef86043c3",
       "bytes": 3003
+    },
+    "main/teloa/teloa_sprite.cc": {
+      "sha256": "0788c245a2b7014071a0543bb3b8c32f23a155af459dfdd97b51f8b4f542b728",
+      "bytes": 2615
+    },
+    "main/teloa/teloa_sprite.h": {
+      "sha256": "9989cb5b650531a538145ed252c16e5719dfa30260dffceb90891f17f6be8aef",
+      "bytes": 1204
+    },
+    "main/teloa/teloa_sprite_player.cc": {
+      "sha256": "f1e0efc545e72244196b58e4ad39bd855454c35ff13e3bb83b3eef36f53f48bb",
+      "bytes": 3187
+    },
+    "main/teloa/teloa_sprite_player.h": {
+      "sha256": "0097563011d159619b52d05835fdce7468222aa7b27a1d459af0546147fa1a29",
+      "bytes": 712
     },
     "main/teloa/teloa_state.cc": {
       "sha256": "6512b2693fb6c0664ce7f146b684ed608c3137714e1a971e4da8f743b878ece8",
@@ -1198,8 +1402,8 @@
       "bytes": 3024
     },
     "tools/build_mascot.py": {
-      "sha256": "7399e92cfabce81996ef720916d6c45be518cfb53dff91e467ea9c030349ef5c",
-      "bytes": 1009
+      "sha256": "5ab6ea1d9ccefa621f54102cd2f98ba2af4c9535678439e4900d0f0fb1279d12",
+      "bytes": 6084
     },
     "tools/build_motion.py": {
       "sha256": "716aea67e691d5a854d1b182d1a239f5e03bca3b0d33bbc50f8fc23d3f015c29",
@@ -1210,16 +1414,16 @@
       "bytes": 4822
     },
     "tools/preview.html": {
-      "sha256": "1d51dc5d7a30c1224e287c4913f7422c2ba3af73e71874ef27e8258a16cd7e47",
-      "bytes": 5827
+      "sha256": "85ddd51d5fefec6db2e93f0f358e896e15ee9b30537fc586e4374bd400068889",
+      "bytes": 5912
     },
     "tools/preview.js": {
-      "sha256": "f44f5f66debf72c4acc62248334bd7a3f8b7e965a315c5745438e1dcd785a05d",
-      "bytes": 6956
+      "sha256": "9d6c2dc3cae68751e32856ed5aead651c04f95645a66fae6aad7176fa0f56a82",
+      "bytes": 7999
     },
     "tools/preview.py": {
-      "sha256": "20f224f4ca58bae7e6b818b27f41755e8a91f4d22d3fb62a340bcc6b9eeefe87",
-      "bytes": 898
+      "sha256": "b52af0448aa9695459072b2fc46822885aa55ae56852f3e2d7a1ed36dd5e7172",
+      "bytes": 1088
     },
     "tools/release.py": {
       "sha256": "c4e3307933932c79cb7e0a34670d0455d444be3c12aa2bcbc1ac7f7caf211b4d",
@@ -1246,8 +1450,12 @@
       "bytes": 2525
     },
     "tools/tests/teloa_motion_test.cc": {
-      "sha256": "73a8aed3867729f543446b3fa126837ac4cd2314ce267f267ffa110a4a2ea119",
-      "bytes": 2433
+      "sha256": "fa4995cd23e6647bf0e33bcd1418f2f15a2a5930cde662a0597f37aad5e629ed",
+      "bytes": 2323
+    },
+    "tools/tests/teloa_sprite_test.cc": {
+      "sha256": "6b52b6f4f0d9a1d6c4816279dcc9f8d6e477780b941e36952dddd12704fad7f4",
+      "bytes": 4460
     },
     "tools/tests/teloa_state_test.cc": {
       "sha256": "d484475fd1ef876a7cecb28420c12f3dab8ad7410ca8d5b8b4a5a46ce4dd321e",
@@ -1269,13 +1477,17 @@
       "sha256": "12f14e1a936de2e5a8cd4abc82396da897f2caba132acac31326b308541c3b02",
       "bytes": 2824
     },
+    "tools/tests/test_sprite.py": {
+      "sha256": "c0ceaa0ce8a64b614e521ae6ffd4f5a2ead94d315e2d35ddd64b3b5a4681807f",
+      "bytes": 1734
+    },
     "tools/tests/test_teloa.py": {
       "sha256": "df01e6decc6f816bc3ff1ddb22c4021202a5f539903ee93e42087265c63624c0",
       "bytes": 5431
     },
     "upstream.lock.json": {
-      "sha256": "c7cc3dab02f17b5e1dcd31b436ebe31c711cfb1b92f180cee50878b694ed8013",
-      "bytes": 27611
+      "sha256": "72b0821a3a1cb2c7f970ef2516d6e84390fa0141ab443aee183ac65289426bcf",
+      "bytes": 27630
     }
   }
 }

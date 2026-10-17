@@ -4,6 +4,7 @@
 #include <vector>
 #include "teloa_approval_view.h"
 #include "teloa_motion.h"
+#include "teloa_sprite_player.h"
 
 namespace teloa {
 enum class ScreenAction { OpenApprovals, ApproveOnce, Reject, NextPage, Back };
@@ -44,8 +45,9 @@ private:
     lv_obj_t* effect_=nullptr;
     lv_obj_t* signal_[3]{};
     PetFrame frame_{},transition_{};
+    SpritePlayer sprites_;
+    uint32_t next_frame_ms_=250;
     uint32_t state_at_=0,react_at_=0,transition_at_=0;
-    unsigned pose_=6;
     uint32_t frame_period_=50;
     bool reacting_=false,quiet_=false;
     std::function<void(ScreenRequest)> action_;
